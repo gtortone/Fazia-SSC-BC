@@ -10,9 +10,9 @@ CND_CONF=default
 CND_DISTDIR=dist
 TMPDIR=build/${CND_CONF}/${IMAGE_TYPE}/tmp-packaging
 TMPDIRNAME=tmp-packaging
-OUTPUT_PATH=dist/${CND_CONF}/${IMAGE_TYPE}/BlockCard-SSC.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
-OUTPUT_BASENAME=BlockCard-SSC.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
-PACKAGE_TOP_DIR=blockcard-ssc/
+OUTPUT_PATH=dist/${CND_CONF}/${IMAGE_TYPE}/Fazia-SSC-BC.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
+OUTPUT_BASENAME=Fazia-SSC-BC.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
+PACKAGE_TOP_DIR=fazia-ssc-bc/
 
 # Functions
 function checkReturnCode
@@ -57,15 +57,15 @@ mkdir -p ${TMPDIR}
 
 # Copy files and create directories and links
 cd "${TOP}"
-makeDirectory ${TMPDIR}/blockcard-ssc/bin
+makeDirectory ${TMPDIR}/fazia-ssc-bc/bin
 copyFileToTmpDir "${OUTPUT_PATH}" "${TMPDIR}/${PACKAGE_TOP_DIR}bin/${OUTPUT_BASENAME}" 0755
 
 
 # Generate tar file
 cd "${TOP}"
-rm -f ${CND_DISTDIR}/${CND_CONF}/package/blockcard-ssc.tar
+rm -f ${CND_DISTDIR}/${CND_CONF}/package/fazia-ssc-bc.tar
 cd ${TMPDIR}
-tar -vcf ../../../../${CND_DISTDIR}/${CND_CONF}/package/blockcard-ssc.tar *
+tar -vcf ../../../../${CND_DISTDIR}/${CND_CONF}/package/fazia-ssc-bc.tar *
 checkReturnCode
 
 # Cleanup
