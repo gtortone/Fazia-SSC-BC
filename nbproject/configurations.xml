@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="62">
+  <logicalFolder name="root" displayName="root" projectFiles="true">
+    <logicalFolder name="HeaderFiles"
+                   displayName="Header Files"
+                   projectFiles="true">
+      <itemPath>include/uartisr.h</itemPath>
+      <itemPath>include/xprintf.h</itemPath>
+      <itemPath>include/board.h</itemPath>
+      <itemPath>include/setup.h</itemPath>
+      <itemPath>include/cbuffer.h</itemPath>
+      <itemPath>include/uartbuf.h</itemPath>
+      <itemPath>include/frame.h</itemPath>
+      <itemPath>include/functions.h</itemPath>
+      <itemPath>include/timerisr.h</itemPath>
+      <itemPath>include/spi-sw.h</itemPath>
+      <itemPath>include/i2c-sw.h</itemPath>
+      <itemPath>include/spi-dev.h</itemPath>
+      <itemPath>include/i2c-dev.h</itemPath>
+      <itemPath>include/typedef.h</itemPath>
+      <itemPath>include/diskio.h</itemPath>
+      <itemPath>include/ff.h</itemPath>
+      <itemPath>include/ffconf.h</itemPath>
+      <itemPath>include/base64.h</itemPath>
+      <itemPath>include/jt-lenval.h</itemPath>
+      <itemPath>include/jt-ports.h</itemPath>
+      <itemPath>include/jt-micro.h</itemPath>
+      <itemPath>include/fpga.h</itemPath>
+    </logicalFolder>
+    <logicalFolder name="SourceFiles"
+                   displayName="Source Files"
+                   projectFiles="true">
+      <itemPath>src/main.c</itemPath>
+      <itemPath>src/xprintf.c</itemPath>
+      <itemPath>src/setup.c</itemPath>
+      <itemPath>src/cbuffer.c</itemPath>
+      <itemPath>src/uartbuf.c</itemPath>
+      <itemPath>src/frame.c</itemPath>
+      <itemPath>src/functions.c</itemPath>
+      <itemPath>src/timerisr.c</itemPath>
+      <itemPath>src/uartisr.c</itemPath>
+      <itemPath>src/spi-sw.c</itemPath>
+      <itemPath>src/i2c-sw.c</itemPath>
+      <itemPath>src/spi-dev.c</itemPath>
+      <itemPath>src/i2c-dev.c</itemPath>
+      <itemPath>src/mmc.c</itemPath>
+      <itemPath>src/ff.c</itemPath>
+      <itemPath>src/ccsbcs.c</itemPath>
+      <itemPath>src/base64.c</itemPath>
+      <itemPath>src/jt-lenval.c</itemPath>
+      <itemPath>src/jt-ports.c</itemPath>
+      <itemPath>src/jt-core.c</itemPath>
+      <itemPath>src/jt-micro.c</itemPath>
+      <itemPath>src/fpga.c</itemPath>
+    </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false">
+      <itemPath>Makefile</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="default" type="2">
+      <toolsSet>
+        <developmentServer>localhost</developmentServer>
+        <targetDevice>dsPIC33FJ128GP804</targetDevice>
+        <targetHeader></targetHeader>
+        <targetPluginBoard></targetPluginBoard>
+        <platformTool>PICkit2PlatformTool</platformTool>
+        <languageToolchain>C30</languageToolchain>
+        <languageToolchainVersion>3_30</languageToolchainVersion>
+        <platform>2</platform>
+      </toolsSet>
+      <compileType>
+        <linkerTool>
+          <linkerLibItems>
+          </linkerLibItems>
+        </linkerTool>
+        <archiverTool>
+        </archiverTool>
+        <loading>
+          <useAlternateLoadableFile>false</useAlternateLoadableFile>
+          <parseOnProdLoad>false</parseOnProdLoad>
+          <alternateLoadableFile></alternateLoadableFile>
+        </loading>
+      </compileType>
+      <makeCustomizationType>
+        <makeCustomizationPreStepEnabled>false</makeCustomizationPreStepEnabled>
+        <makeCustomizationPreStep></makeCustomizationPreStep>
+        <makeCustomizationPostStepEnabled>false</makeCustomizationPostStepEnabled>
+        <makeCustomizationPostStep></makeCustomizationPostStep>
+        <makeCustomizationPutChecksumInUserID>false</makeCustomizationPutChecksumInUserID>
+        <makeCustomizationEnableLongLines>false</makeCustomizationEnableLongLines>
+        <makeCustomizationNormalizeHexFile>false</makeCustomizationNormalizeHexFile>
+      </makeCustomizationType>
+      <C30>
+        <property key="code-model" value="default"/>
+        <property key="const-model" value="default"/>
+        <property key="data-model" value="default"/>
+        <property key="enable-all-warnings" value="false"/>
+        <property key="enable-ansi-std" value="false"/>
+        <property key="enable-ansi-warnings" value="false"/>
+        <property key="enable-fatal-warnings" value="false"/>
+        <property key="enable-large-arrays" value="false"/>
+        <property key="enable-omit-frame-pointer" value="false"/>
+        <property key="enable-procedural-abstraction" value="false"/>
+        <property key="enable-short-double" value="false"/>
+        <property key="enable-symbols" value="true"/>
+        <property key="enable-unroll-loops" value="false"/>
+        <property key="extra-include-directories" value="./include"/>
+        <property key="isolate-each-function" value="false"/>
+        <property key="optimization-level" value="3"/>
+        <property key="post-instruction-scheduling" value="schedule-insns2"/>
+        <property key="pre-instruction-scheduling" value="schedule-insns"/>
+        <property key="preprocessor-macros" value=""/>
+        <property key="scalar-model" value="default"/>
+      </C30>
+      <C30-AS>
+        <property key="assembler-symbols" value=""/>
+        <property key="expand-macros" value="false"/>
+        <property key="extra-include-directories-for-assembler" value=""/>
+        <property key="extra-include-directories-for-preprocessor" value=""/>
+        <property key="false-conditionals" value="false"/>
+        <property key="keep-locals" value="false"/>
+        <property key="list-assembly" value="false"/>
+        <property key="list-section-info" value="false"/>
+        <property key="list-source" value="false"/>
+        <property key="list-symbols" value="false"/>
+        <property key="oXC16asm-list-to-file" value="false"/>
+        <property key="omit-debug-dirs" value="false"/>
+        <property key="omit-forms" value="false"/>
+        <property key="preprocessor-macros" value=""/>
+        <property key="relax" value="true"/>
+        <property key="warning-level" value="emit-warnings"/>
+      </C30-AS>
+      <C30-LD>
+        <property key="boot-eeprom" value="no_eeprom"/>
+        <property key="boot-flash" value="no_flash"/>
+        <property key="boot-ram" value="no_ram"/>
+        <property key="boot-write-protect" value="no_write_protect"/>
+        <property key="enable-check-sections" value="false"/>
+        <property key="enable-data-init" value="true"/>
+        <property key="enable-default-isr" value="true"/>
+        <property key="enable-handles" value="true"/>
+        <property key="enable-pack-data" value="true"/>
+        <property key="extra-lib-directories" value=""/>
+        <property key="general-code-protect" value="no_code_protect"/>
+        <property key="general-write-protect" value="no_write_protect"/>
+        <property key="generate-cross-reference-file" value="false"/>
+        <property key="heap-size" value="2048"/>
+        <property key="input-libraries" value=""/>
+        <property key="linker-symbols" value=""/>
+        <property key="map-file" value=""/>
+        <property key="preprocessor-macros" value=""/>
+        <property key="remove-unused-sections" value="false"/>
+        <property key="report-memory-usage" value="false"/>
+        <property key="secure-eeprom" value="no_eeprom"/>
+        <property key="secure-flash" value="no_flash"/>
+        <property key="secure-ram" value="no_ram"/>
+        <property key="secure-write-protect" value="no_write_protect"/>
+        <property key="stack-size" value="2048"/>
+        <property key="symbol-stripping" value=""/>
+        <property key="trace-symbols" value=""/>
+        <property key="warn-section-align" value="false"/>
+      </C30-LD>
+      <C30Global>
+        <property key="fast-math" value="true"/>
+        <property key="legacy-libc" value="false"/>
+        <property key="output-file-format" value="elf"/>
+      </C30Global>
+      <PICkit2PlatformTool>
+        <property key="pk2settings.3state" value="false"/>
+        <property key="pk2settings.preserveee" value="false"/>
+        <property key="pk2settings.setvddvoltage" value="3.25"/>
+        <property key="pk2settings.userpgmexec" value="true"/>
+        <property key="pk2settings.usetargetpower" value="false"/>
+      </PICkit2PlatformTool>
+    </conf>
+  </confs>
+</configurationDescriptor>
