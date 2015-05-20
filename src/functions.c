@@ -69,6 +69,7 @@ void func_init(void) {
    fplist[25] = &f_sfp_read; // 0x9C
    fplist[26] = &f_getuerr; // 0x9D
    fplist[27] = &f_resetuart; // 0x9E
+   fplist[28] = &f_readrate; // 0x9F
 }
 
 BYTE func_invoke(unsigned char code, char *data, char *result) {
@@ -738,6 +739,55 @@ BYTE f_resetuart(char *data, char *result) {
    __delay_ms(100);
 
    sprintf(result, "0|");
+
+   return FUNC_CMD_OK;
+}
+
+BYTE f_readrate(char *data, char *result) {
+
+   UINT16 lsb, msb, index;
+   int i, nconv;
+   int fee;
+   BYTE retval;
+   UINT16 rate_telA, rate_telB;
+
+   nconv = sscanf(data, "%d", &fee);
+
+    if (nconv != 1) {
+
+      retval = FUNC_EXEC_BAD_ARGS_TYPE;
+      sprintf(result, "%d|", retval);
+      return FUNC_CMD_OK;
+   }
+
+   if( (fee < 0) || (fee > 7) ) {
+
+       retval = FUNC_EXEC_BAD_ARGS_VALUE;
+       sprintf(result, "%d|", retval);
+       return FUNC_CMD_OK;
+   }
+
+   IEC0bits.T2IE = 0;           // disable Timer2
+   fpga_write(0x001, 0x100);    // lock
+
+   index = 0x110 + (fee * 4);
+   lsb = fpga_read(index);
+   msb = fpga_read(index + 1);
+
+   //rate_telA = (UINT16)lsb + (UINT16)(msb << 8);
+   rate_telA = lsb + (msb << 8);
+
+   index = 0x110 + (fee * 4 + 2);
+   lsb = fpga_read(index);
+   msb = fpga_read(index + 1);
+
+   //rate_telB = (UINT16)lsb + (UINT16)(msb << 8);
+   rate_telB = lsb + (msb << 8);
+
+   fpga_write(0x000, 0x100);    // unlock
+   IEC0bits.T2IE = 1;           // enable Timer2
+
+   sprintf(result, "0|%d,%d", rate_telA, rate_telB);
 
    return FUNC_CMD_OK;
 }

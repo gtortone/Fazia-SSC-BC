@@ -4,7 +4,7 @@
 #include <Generic.h>
 #include "ff.h"
 
-#define MAX_FUNC_NUM    29
+#define MAX_FUNC_NUM    30
 #define MAX_HPFUNC_NUM   3
 
 #define FUNC_CMD_OK                 0x00
@@ -53,6 +53,7 @@ BYTE f_adc_write(char *data, char *result);
 BYTE f_sfp_read(char *data, char *result);
 BYTE f_getuerr(char *data, char *result);
 BYTE f_resetuart(char *data, char *result);
+BYTE f_readrate(char *data, char *result);
 
 #endif
 
