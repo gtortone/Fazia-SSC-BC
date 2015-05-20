@@ -101,7 +101,7 @@ void fpga_init(void) {
    fpga.SPIp.SS.npin = 7;
    fpga.SPIp.tx_bitsize = 14;
    fpga.SPIp.rx_bitsize = 8;
-   fpga.SPIp.delay_us = 5;
+   fpga.SPIp.delay_us = 1;
 
    SPI_init(&(fpga.SPIp));
 }
