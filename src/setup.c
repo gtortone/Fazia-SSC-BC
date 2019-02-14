@@ -359,9 +359,11 @@ void memsetup(void) {
    vcxo_enable(&VCXO50M);
    vcxo_enable(&VCXO150M);
 
-   pll_enable(&PLL25M);
-   pll_enable(&PLL50M);
-   pll_enable(&PLL150M);
+   if(isPOR()) {
+      pll_enable(&PLL25M);
+      pll_enable(&PLL50M);
+      pll_enable(&PLL150M);
+   }
 
    disk_initialize(0);
    f_mount(0, &Fatfs);
